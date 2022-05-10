@@ -1,0 +1,978 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+
+/*============================================
+*
+* all
+*
+*============================================*/
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+html,body{
+	font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	background-color: #000;
+	color: #fff;
+	margin: 0;
+	line-height: 1.7;
+	box-sizing: border-box;
+	cursor: none!important;/* カーソルを非表示 */
+
+	/* 桜 */
+	height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+.flex-title {
+	padding: 1.5rem 1rem;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.flex-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+img {
+	vertical-align: top;
+}
+
+img.gray {
+	filter: grayscale(0);
+	transition: all .3s ease;
+}
+
+img.gray:hover {
+	filter: grayscale(100%);
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto 5rem;
+}
+
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.float-right {
+	float: right;
+}
+
+h1 {
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+}
+
+a {
+	color: #fff;
+	transition: all .3s ease;
+	cursor: none!important;/* カーソルを非表示 */
+}
+
+a:hover {
+	color: #ff2c60;
+	text-decoration: none;
+}
+
+#titlelogo {
+	text-align: center;
+	margin: 270px auto;
+	max-width: 1000px;
+}
+
+section {
+	margin: 0 auto 5rem;
+}
+
+footer {
+	background: #333;
+	font-size: 14px;
+	padding: 1rem 0;
+	text-align: center;
+}
+
+
+li {
+	list-style: none;
+}
+
+
+
+/*============================================
+*
+* profile
+*
+*============================================*/
+
+.member_parent {
+	margin: 0 auto 5rem;
+	overflow: hidden;
+}
+
+.member_parent .imgbox {
+	display: flex;
+	justify-content: center;/* 水平方向に中央 */
+	align-items: start;/* 垂直方向に上 */
+}
+
+.member_parent .imgbox img {/* 枠内で収まるように */
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.member_parent h2 {
+	margin: 0 0 1rem;
+}
+
+.member_parent .profile {
+	border-left: solid 2px #ff2c60;
+	display: table;
+	padding-left: 1rem;
+}
+
+.member_parent .profile > table {/* 参考文献あり */
+	border-collapse: separate;/* セル間に余白 */
+	border-spacing: 0 1rem;/* 列方向に0文字、行方向に1文字分余白 */
+}
+
+.member_parent .profile th {
+	white-space: nowrap;/* 自動改行禁止 */
+	text-align: right;
+	vertical-align: top;
+}
+
+.member_parent .profile th::after {
+	content: "🌸";
+}
+
+.member_parent .profile td table th::after {/* td内のtableのth */
+	content: "";
+}
+
+.member_parent .profile td table td {/* td内のtableのtd */
+	padding-left: 1rem;
+}
+
+
+
+/*============================================
+*
+* biography
+*
+*============================================*/
+
+.bio-list {
+	border-left: solid 2px #ff2c60;
+}
+
+.bio-item {
+	position: relative;
+	margin-bottom: 2rem;
+	padding-left: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.bio-item::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%) scale(1);
+	left: 0;
+	background-color: #ff2c60;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	transition: transform .5s cubic-bezier(.23,1,.54,1.44);
+}
+
+.bio-item .bio-date {/* 日付 */
+	min-width: 10rem;
+	color: #999;
+}
+
+.bio-item img {/* 画像 */
+	width: 150px;
+}
+
+.bio-item .bio-content {/* 内容 */
+	padding-left: 1rem;
+}
+
+
+
+/*============================================
+*
+* news
+*
+*============================================*/
+
+.news li {
+	list-style: none;
+	margin-bottom: 2rem;
+}
+
+.news .n-date, .m-date {
+	color: #999;
+	position: relative;
+}
+
+.new {
+	background-color: #ff2c60;
+	color: #fff;
+	padding: 0 6px;
+	font-style: italic;
+	font-size: 14px;
+}
+
+.news .n-title {
+	position: relative;
+	display: block;
+	transition: all .3s ease;
+}
+
+.news .n-title a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.news .n-title::after {
+	content: "";
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%) rotate(135deg);
+	width: 12px;
+	height: 12px;
+	border-top: solid 2px #fff;
+	border-right: solid 2px #fff;
+	transition: all .5s ease;
+}
+
+.news .n-title:hover {
+	color: #ff2c60;
+}
+
+.news .n-title:hover::after{
+	border-top: solid 2px #ff2c60;
+	border-right: solid 2px #ff2c60;
+}
+
+.news .n-title span {
+	overflow: hidden; 
+	display: -webkit-box;/* webkitの機能を使うようにする*/
+	-webkit-box-orient: vertical;/* 縦に折り返す*/
+	-webkit-line-clamp: 2;/* 2行まで表示する*/
+}
+
+.news .n-content h2 {
+	border-bottom: solid 2px #ff2c60;
+}
+
+
+
+
+/*============================================
+*
+* movies
+*
+*============================================*/
+
+dl {
+	margin-bottom: 10rem;
+}
+
+dt {
+	display: flex;
+	align-items: center;
+	font-size: 28px;
+	margin: 2rem 0;
+}
+
+dt::before, dt::after {
+	content: "";
+	flex-grow: 1;
+	height: 2px;
+	background: #ff2c60;
+}
+
+dt::before {
+	margin-right: 1rem;
+}
+
+dt::after {
+	margin-left: 1rem;
+}
+
+.video-container {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.video-container iframe {
+	width: 100%;
+	vertical-align: top;
+}
+
+
+
+/*============================================
+*
+* gallery
+*
+*============================================*/
+
+#gallery {
+	margin: auto;
+	width: 100%;
+}
+
+#gallery .main img {
+	border: solid 4px #fff;
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+#gallery .thumb img {
+	border: solid 4px #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 14px #666;
+	height: 300px;
+	width: 300px;
+	margin: 1rem;
+}
+
+
+
+/*============================================
+*
+* 3本線が×になるハンバーガーメニュー
+*
+*============================================*/
+
+/* リセット */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+::before , ::after {
+	box-sizing: inherit;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	vertical-align: middle;
+	text-align: inherit;
+	font: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: none!important;
+}
+
+/* メニューエリア */
+.menu {
+	/* メニューの位置マイナス指定で画面外に */
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 100%;
+	height:100vh;
+	padding: 5rem 20%;
+	/* メニューを縦に */
+	display: flex;
+	flex-direction: column;
+	color: #efefef;
+	background-color: #000;
+	transition: all .3s ease;
+}
+
+.menu.open {/* 非表示のメニューを表示 */
+	right: 0;
+	z-index: 10;
+}
+
+.menu-logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.4;
+	list-style: none;
+}
+
+.menu-logo img {
+	max-width: 100%;
+	margin: auto;
+}
+
+.menu-list {
+	width: 100%;
+	height: 100%;
+	font-size: 1.5rem;
+	z-index: 10;
+}
+
+.menu-list a {
+	text-decoration: none;
+	padding: 0 0.5rem;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.menu-list a span {
+	background-color: #000;
+	padding: 0 0.5rem;
+}
+
+.menu-external {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+/* ハンバーガー */
+.btn {
+	/* ボタンの大きさ*/
+	width: 40px;
+	height: 40px;
+	/* 最前面に*/
+	z-index: 10;
+}
+
+/* 真ん中のバーガー線 */
+.btn-line {
+	display: block;
+	position: relative;	/* バーガー線の位置基準として設定 */
+	width: 100%;	/* 線の長さと高さ */
+	height: 1px;
+	background-color: #fff;	/* バーガー線の色 */
+	transition: all .3s ease;
+}
+
+/* 上下のバーガー線 */
+.btn-line::before,
+.btn-line::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	transition: all .5s ease;
+}
+.btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-10px);
+}
+.btn-line::after {
+  /* 下の線の位置 */
+  transform: translateY(10px);
+}
+
+/* メニューオープン時 */
+.btn-line.open {
+	background-color: transparent;	/* 真ん中の線を透明に */
+}
+
+.btn-line.open::before ,
+.btn-line.open::after {
+	content: "";
+	transition: all .3s ease;
+}
+
+.btn-line.open::before {
+	transform: rotate(45deg);	/* 上の線を傾ける */
+}
+
+.btn-line.open::after {
+	transform: rotate(-45deg);	/* 下の線を傾ける */
+}
+
+
+
+/*============================================
+*
+* 桜を降らせる
+*
+*===========================================*/
+
+#particles-js { 
+	position:fixed;/*描画固定*/
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#wrapper {
+	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width:100%;
+	height: 100%;
+}
+
+
+
+/*============================================
+*
+* アコーディオン
+*
+*============================================*/
+
+.ac-check {
+	display: none;
+}
+
+.n-content {
+	background-color: #333;
+	max-height: 0;
+	opacity: 0;
+	padding: 0 1rem;
+	transition: 1s;
+	visibility: hidden;
+}
+
+.ac-check:checked + .n-title + .n-content {
+	max-height: 1000vh;
+	opacity: 1;
+	visibility: visible;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.ac-check:checked + .n-title::after {
+	transform: rotate(-45deg);
+}
+
+
+
+/*============================================
+*
+* pagination（未実装）
+*
+*============================================*/
+/*
+.pagination {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+}
+
+.pagination li {
+	padding: 0 1rem;
+}
+
+.pagination li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.pagination .page a {
+	color: #666;
+}
+
+.pagination .active a {
+	color: #ff2c60;
+}
+*/
+
+
+
+/*============================================
+*
+* リンクホバーで枠の内外にブラー風シャドウ
+*
+*============================================*/
+
+.main-button a {
+	display: block;
+	width: 15rem;
+	border: solid 1px #fff;
+	margin: 2rem auto 4rem;
+	padding: 1rem 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+.main-button a:hover, .to-top-arrow:hover::before {
+	box-shadow: inset 0 0 40px rgba(255,44,96,0.4), 0 0 40px rgba(255,44,96,0.4);
+	border: solid 1px #ff2c60;
+}
+
+
+
+/*============================================
+*
+* TOPへ戻るボタン
+*
+*============================================*/
+
+.arrow{
+	display: inline-block;
+	padding: 0 0 0 16px;
+	color: #fff;
+	vertical-align: middle;
+	text-decoration: none;
+	font-size: 15px;
+	position: fixed;
+	right:8rem;
+	bottom: 8rem;
+}
+
+.arrow::before,
+.arrow::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	vertical-align: middle;
+}
+
+.to-top-arrow::before{
+	box-sizing: border-box;
+	width: 50px;
+	height: 50px;
+	border: solid 1px #fff;
+	transition: all .3s ease;
+	background: rgba(0,0,0,0.5);
+}
+
+.to-top-arrow::after{
+	top: 9px;
+	left: 20px;
+	width: 12px;
+	height: 12px;
+	border-top: solid 1px #fff;
+	border-right: solid 1px #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.to-top-arrow:hover::after{
+	border-top: solid 1px #ff2c60;
+	border-right: solid 1px #ff2c60;
+}
+
+
+
+/*============================================
+*
+* PC向け
+*
+*============================================*/
+
+@media (min-width: 1021px) {
+}
+
+
+
+/*============================================
+*
+* 狭いブラウザ・タブレット向け
+*
+*============================================*/
+
+@media (max-width: 1020px) and (min-width: 768px) {
+	/* 歴史 */
+	.bio-list {
+		margin-left: 0.5rem;
+		padding-right: 1rem;
+	}
+}
+
+
+/*============================================
+*
+* スマホ向け
+*
+*============================================*/
+
+@media (max-width: 767px) {
+	/* all */
+	#titlelogo {
+	}
+
+	#titlelogo img {
+		display: block;
+		transform: rotate(90deg);
+	}
+
+	.video-container {
+		width: 100%;
+	}
+	
+	.arrow {
+		right: 3rem;
+		bottom: 6rem;
+	}
+	
+	.main-button a {
+		width: 60vw;
+	}
+	
+	
+	
+	/* メンバー紹介 */
+	.member_parent .profile {
+		margin-left: 0.5rem;
+	}
+	
+	
+	
+	/* 歴史 */
+	.bio-list {
+		margin-left: 0.5rem;
+		padding-right: 1rem;
+	}
+
+	.bio-item {
+		display: block;
+	}
+
+	.bio-item::before {
+		top: 1rem;
+		width: 14px;
+		height: 14px;
+	}
+
+	.bio-item p:nth-child(3) {/* 内容 */
+		padding-left: 0;
+	}
+
+	.bio-item img {
+		width: 100%;
+	}
+
+
+
+	/* 新着情報 */
+	.news li:not(:first-child) .n-date::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 80%;
+		height: 1px;
+		background-color: #fff;
+		margin: -1rem 15px;
+	}
+	
+	.news .n-title {
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.news .n-title span {
+		padding-right: 1.5rem;
+		display: inline-block;
+	}
+	
+	.news .n-title::after {
+		content: "";
+		position: absolute;
+		right: 1rem;
+		top: 50%;
+		transform: translateY(-50%) rotate(45deg);
+		width: 12px;
+		height: 12px;
+		border-top: solid 2px #fff;
+		border-right: solid 2px #fff;
+	}
+	
+	
+	
+	/* 出演情報 */
+	.m-content img {
+		max-width: 100%;
+	}
+	
+	
+	
+	/* 写真集 */
+	#gallery .thumb img {
+		display: block;
+		margin: 2rem auto;
+	}
+	
+	
+	
+	/* ハンバーガーメニュー */
+	.menu {
+		padding: 5rem 1rem;
+	}
+	
+	.menu-logo {
+		top: 25%;
+	}
+	
+	.menu-list a {
+		justify-content: center;
+	}
+}
+
+
+/*============================================
+*
+* タブレット以上
+*
+*============================================*/
+
+@media (min-width: 768px) {
+
+	/* all */
+	.col-sm-2 {
+		width: 16.66666667%;
+	}
+	
+	.col-sm-3 {
+		width: 25%;
+	}
+
+	.col-sm-6 {
+		width: 50%;
+	}
+	
+	.col-sm-9 {
+		width: 75%;
+	}
+	
+	.col-sm-10 {
+		width: 83.33333333%;
+	}
+	
+	.col-sm-12 {
+		width: 100%;
+	}
+	
+	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+		float: left;
+	}
+	
+	
+	
+	/* メンバー紹介 */
+	.member_parent:nth-child(odd) .imgbox {/* 奇数番目sectionのimg */
+		float: left;
+	}
+
+	.member_parent:nth-child(even) .imgbox {/* 偶数番目sectionのimg */
+		float: right;
+	}
+	
+	
+	
+	/* 新着情報 */
+	.news .n-title {
+		top: 50%;
+		height: 60px;/* 高さを変えない */
+	}
+	
+	.news .n-title::before, .m-content::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 1px;
+		transition: all .3s ease;
+		background-color: #fff;
+	}
+	
+	.news .n-title span {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding-right: 3rem;
+	}
+	
+	/* 出演情報 */
+	.m-content img {
+		max-width: 150px;
+	}
+
+
+
+	/* ハンバーガーメニュー */
+	.menu-list a::after {
+		content: "";
+		flex-grow: 0;
+		height: 2px;
+		background: #ff2c60;
+		display: block;
+		transition: all .3s ease;
+	}
+
+	.menu-list a:hover::after  {
+		flex-grow: 1;
+	}
+
+
+
+	/*============================================
+	*
+	* マウスカーソルを●に変える
+	*
+	*============================================*/
+
+	#cursor {
+		transform: translate(0, 0);
+		pointer-events: none;
+		position: fixed;
+		top: -20px;
+		left: -20px;
+		width: 40px;
+		height: 40px;
+		background: rgba(255, 44, 96, 0.5);
+		border-radius: 50%;
+		z-index: 999;
+		transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+	}
+
+	#cursor.hover{
+		top: -40px;
+		left: -40px;
+		width: 80px;
+		height: 80px;
+		background: rgba(255, 44, 96, 0.75);
+	}
+
+	#cursor.hover::after {
+		content: "PUSH";
+		position: absolute;
+		top: 35%;
+		left: 25%;
+	}
+}
