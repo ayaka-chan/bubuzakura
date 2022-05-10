@@ -21,7 +21,7 @@ html,body{
 	margin: 0;
 	line-height: 1.7;
 	box-sizing: border-box;
-	/*cursor: none!important; カーソルを非表示 */
+	cursor: none!important; /*カーソルを非表示 */
 
 	/* 桜 */
 	height: 100%;/*高さを100%にして描画エリアをとる*/
@@ -84,7 +84,7 @@ h1 {
 a {
 	color: #fff;
 	transition: all .3s ease;
-	/*cursor: none!important; カーソルを非表示 */
+	cursor: none!important; /*カーソルを非表示 */
 }
 
 a:hover {
@@ -395,7 +395,7 @@ button {
 	font: inherit;
 	-webkit-appearance: none;
 	appearance: none;
-	/*cursor: none!important;*/
+	cursor: none!important;
 }
 
 /* メニューエリア */
