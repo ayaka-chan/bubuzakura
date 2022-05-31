@@ -530,7 +530,7 @@ button {
 *============================================*/
 
 #cursor {
-	transform: translate(-20px, -20px);
+	transform: translate(-100px, -100px);
 	pointer-events: none;
 	position: fixed;
 	top: -20px;
