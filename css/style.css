@@ -494,12 +494,12 @@ button {
 	transition: all .5s ease;
 }
 .btn-line::before {
-  /* 上の線の位置 */
-  transform: translateY(-10px);
+	/* 上の線の位置 */
+	transform: translateY(-10px);
 }
 .btn-line::after {
-  /* 下の線の位置 */
-  transform: translateY(10px);
+	/* 下の線の位置 */
+	transform: translateY(10px);
 }
 
 /* メニューオープン時 */
@@ -533,10 +533,10 @@ button {
 	transform: translate(0, 0);
 	pointer-events: none;
 	position: fixed;
-	top: -15px;
-	left: -15px;
-	width: 30px;
-	height: 30px;
+	top: -20px;
+	left: -20px;
+	width: 40px;
+	height: 40px;
 	background: rgba(255, 44, 96, 0.5);
 	border-radius: 50%;
 	z-index: 999;
