@@ -21,7 +21,7 @@ html,body{
 	margin: 0;
 	line-height: 1.7;
 	box-sizing: border-box;
-	cursor: none!important; /*カーソルを非表示 */
+	cursor: none!important;/* カーソルを非表示 */
 
 	/* 桜 */
 	height: 100%;/*高さを100%にして描画エリアをとる*/
@@ -61,6 +61,14 @@ img.gray:hover {
 	margin: 0 auto 5rem;
 }
 
+.col-6 {
+	width: 50%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	float: left;
+}
+
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
 	position: relative;
 	min-height: 1px;
@@ -84,7 +92,7 @@ h1 {
 a {
 	color: #fff;
 	transition: all .3s ease;
-	cursor: none!important; /*カーソルを非表示 */
+	cursor: none!important;/* カーソルを非表示 */
 }
 
 a:hover {
@@ -346,22 +354,18 @@ dt::after {
 #gallery {
 	margin: auto;
 	width: 100%;
+	overflow: hidden;
 }
 
-#gallery .main img {
+#gallery .thumb .imgflame img {
 	border: solid 4px #fff;
-	width: 100%;
+	max-height: 90%;
+	max-width: 100%;
 	display: block;
-	margin: auto;
 }
 
-#gallery .thumb img {
-	border: solid 4px #fff;
-	border-radius: 50%;
-	box-shadow: 0 0 14px #666;
-	height: 300px;
-	width: 300px;
-	margin: 1rem;
+#gallery .thumb .imgflame p {
+	margin-bottom: 1.5rem;
 }
 
 
@@ -517,6 +521,42 @@ button {
 	transform: rotate(-45deg);	/* 下の線を傾ける */
 }
 
+
+
+/*============================================
+*
+* マウスカーソルを●に変える
+*
+*============================================*/
+
+#cursor {
+	transform: translate(0, 0);
+	pointer-events: none;
+	position: fixed;
+	top: -20px;
+	left: -20px;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 44, 96, 0.5);
+	border-radius: 50%;
+	z-index: 999;
+	transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+}
+
+#cursor.hover{
+	top: -40px;
+	left: -40px;
+	width: 80px;
+	height: 80px;
+	background: rgba(255, 44, 96, 0.75);
+}
+
+#cursor.hover::after {
+	content: "PUSH";
+	position: absolute;
+	top: 35%;
+	left: 25%;
+}
 
 
 /*============================================
@@ -721,6 +761,8 @@ button {
 
 @media (max-width: 767px) {
 	/* all */
+	
+
 	#titlelogo {
 	}
 
@@ -821,14 +863,6 @@ button {
 	
 	
 	
-	/* 写真集 */
-	#gallery .thumb img {
-		display: block;
-		margin: 2rem auto;
-	}
-	
-	
-	
 	/* ハンバーガーメニュー */
 	.menu {
 		padding: 5rem 1rem;
@@ -923,6 +957,12 @@ button {
 		max-width: 150px;
 	}
 
+	/* 写真集 */
+	#gallery .thumb .imgflame {
+		height: 470px;
+		box-sizing: border-box;
+	}
+
 
 
 	/* ハンバーガーメニュー */
@@ -939,40 +979,4 @@ button {
 		flex-grow: 1;
 	}
 
-
-
-	/*============================================
-	*
-	* マウスカーソルを●に変える
-	*
-	*============================================*/
-
-	#cursor {
-		transform: translate(0, 0);
-		pointer-events: none;
-		position: fixed;
-		top: -20px;
-		left: -20px;
-		width: 40px;
-		height: 40px;
-		background: rgba(255, 44, 96, 0.5);
-		border-radius: 50%;
-		z-index: 999;
-		transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
-	}
-
-	#cursor.hover{
-		top: -40px;
-		left: -40px;
-		width: 80px;
-		height: 80px;
-		background: rgba(255, 44, 96, 0.75);
-	}
-
-	#cursor.hover::after {
-		content: "PUSH";
-		position: absolute;
-		top: 35%;
-		left: 25%;
-	}
 }
