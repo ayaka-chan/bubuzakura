@@ -19,34 +19,30 @@ let album=[
 	{src:'img/2015/150405_2.jpg', alt:'2015年4月5日　にんじゃりばんばん'},
 ];
 
-//最初のデータを表示しておく
-//<img src="" alt="">
-let mainImage=document.createElement('img');
-mainImage.setAttribute('src',album[0].src);
-mainImage.setAttribute('alt',album[0].alt);
 
-//<p>キャプション</p>
-let mainAlt=document.createElement('p');
-mainAlt.innerText=mainImage.alt;
 
-let mainFlame=document.querySelector('#gallery .main');
-mainFlame.insertBefore(mainImage,null);
-mainFlame.insertBefore(mainAlt,null);
-
-//サムネイル画像の表示
+//画像の表示
 let thumbFlame=document.querySelector('#gallery .thumb');
 for (let i=0; i<album.length; i++) {
-	//<img src="" alt="">
+	//<div class="col-sm-6"></div>
+	let colFlame=document.createElement('div');
+	colFlame.setAttribute('class', 'col-sm-6');
+	thumbFlame.insertBefore(colFlame, null);
+
+	//<div class="imgflame"></div>
+	let imgFlame=document.createElement('div');
+	imgFlame.setAttribute('class', 'imgflame');
+	colFlame.insertBefore(imgFlame, null);
+
+	//<img src="img/2015/150405_2.jpg" alt="2015年4月5日　にんじゃりばんばん">
 	let thumbImage=document.createElement('img');
 	thumbImage.setAttribute('src', album[i].src);
 	thumbImage.setAttribute('alt', album[i].alt);
-	thumbFlame.insertBefore(thumbImage, null);
+	imgFlame.insertBefore(thumbImage, null);
+
+	//<p>キャプション</p>
+	let thumbAlt=document.createElement('p');
+	thumbAlt.innerText=thumbImage.alt;
+	imgFlame.insertBefore(thumbAlt,null);
 }
 
-//クリックした画像をメインに表示する
-thumbFlame.addEventListener('click', function(event) {
-	if(event.target.src) {
-		mainImage.src=event.target.src;
-		mainAlt.innerText=event.target.alt;
-	}
-});

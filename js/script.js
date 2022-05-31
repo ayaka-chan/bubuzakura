@@ -112,7 +112,7 @@ if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
 		});
 
 		//aタグとbuttonタグにclass付与
-		const linkElem = document.querySelectorAll('a,button,label,.thumb img');//,.acc-btn 削除、.paging 追加
+		const linkElem = document.querySelectorAll('a,button,label');//マウスオーバーで変化させたい要素
 		for (let i = 0; i < linkElem.length; i++) {
 			linkElem[i].addEventListener('mouseover', function (e) {
 				cursor.classList.add('hover');
