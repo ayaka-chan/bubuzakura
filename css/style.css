@@ -362,6 +362,7 @@ dt::after {
 	max-height: 90%;
 	max-width: 100%;
 	display: block;
+	margin: auto;
 }
 
 #gallery .thumb .imgflame p {
