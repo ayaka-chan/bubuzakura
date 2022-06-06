@@ -263,7 +263,7 @@ li {
 	height: 100%;
 }
 
-.news .n-title a::after {
+.news .n-title::after {
 	content: "";
 	position: absolute;
 	right: 1.5rem;
@@ -280,7 +280,7 @@ li {
 	color: #ff2c60;
 }
 
-.news .n-title a:hover::after{
+.news .n-title:hover::after{
 	border-top: solid 2px #ff2c60;
 	border-right: solid 2px #ff2c60;
 }
