@@ -263,24 +263,23 @@ li {
 	height: 100%;
 }
 
-.news .n-title::after {
+.news .n-title a::after {
 	content: "";
 	position: absolute;
 	right: 1.5rem;
 	top: 50%;
-	transform: translateY(-50%) rotate(135deg);
+	transform: translateY(-50%) rotate(45deg);
 	width: 12px;
 	height: 12px;
 	border-top: solid 2px #fff;
 	border-right: solid 2px #fff;
-	transition: all .5s ease;
 }
 
 .news .n-title:hover {
 	color: #ff2c60;
 }
 
-.news .n-title:hover::after{
+.news .n-title a:hover::after{
 	border-top: solid 2px #ff2c60;
 	border-right: solid 2px #ff2c60;
 }
@@ -608,6 +607,24 @@ button {
 	padding-bottom: 1rem;
 }
 
+.ac-check + .n-title::after {
+	content: "";
+	position: absolute;
+	right: 1.5rem;
+	top: 50%;
+	transform: translateY(-50%) rotate(135deg);
+	width: 12px;
+	height: 12px;
+	border-top: solid 2px #fff;
+	border-right: solid 2px #fff;
+	transition: all .3s ease;
+}
+
+.ac-check + .n-title:hover::after{
+	border-top: solid 2px #ff2c60;
+	border-right: solid 2px #ff2c60;
+}
+
 .ac-check:checked + .n-title::after {
 	transform: rotate(-45deg);
 }
@@ -841,7 +858,7 @@ button {
 		padding-right: 1.5rem;
 		display: inline-block;
 	}
-	
+	/*
 	.news .n-title::after {
 		content: "";
 		position: absolute;
@@ -853,7 +870,7 @@ button {
 		border-top: solid 2px #fff;
 		border-right: solid 2px #fff;
 	}
-	
+	*/
 	
 	
 	/* 出演情報 */
