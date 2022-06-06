@@ -22,9 +22,7 @@ html,body{
 	line-height: 1.7;
 	box-sizing: border-box;
 	cursor: none!important;/* カーソルを非表示 */
-
-	/* 桜 */
-	height: 100%;/*高さを100%にして描画エリアをとる*/
+	height: 100%;/*高さを100%にして桜の描画エリアをとる*/
 }
 
 .flex-title {
@@ -240,7 +238,7 @@ li {
 	margin-bottom: 2rem;
 }
 
-.news .n-date, .m-date {
+.news .n-date {
 	color: #999;
 	position: relative;
 }
@@ -265,10 +263,10 @@ li {
 	height: 100%;
 }
 
-.news .n-title::after {
+.news .n-title a::after {
 	content: "";
 	position: absolute;
-	right: 1rem;
+	right: 1.5rem;
 	top: 50%;
 	transform: translateY(-50%) rotate(135deg);
 	width: 12px;
@@ -282,13 +280,13 @@ li {
 	color: #ff2c60;
 }
 
-.news .n-title:hover::after{
+.news .n-title a:hover::after{
 	border-top: solid 2px #ff2c60;
 	border-right: solid 2px #ff2c60;
 }
 
 .news .n-title span {
-	overflow: hidden; 
+	overflow: hidden;
 	display: -webkit-box;/* webkitの機能を使うようにする*/
 	-webkit-box-orient: vertical;/* 縦に折り返す*/
 	-webkit-line-clamp: 2;/* 2行まで表示する*/
