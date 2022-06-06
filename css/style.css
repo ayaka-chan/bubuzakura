@@ -56,7 +56,6 @@ img.gray:hover {
 
 .container {
 	max-width: 1000px;
-	min-height: 100vh;
 	margin: 0 auto 5rem;
 }
 
@@ -103,6 +102,10 @@ a:hover {
 	text-align: center;
 	margin: 270px auto;
 	max-width: 1000px;
+}
+
+main .container {
+	min-height: 100vh;
 }
 
 section {
