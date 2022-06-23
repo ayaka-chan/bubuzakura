@@ -603,7 +603,7 @@ button {
 	visibility: hidden;
 }
 
-.ac-check:checked + li .n-title + .n-content {
+.ac-check:checked + .n-title + .n-content {
 	max-height: 1000vh;
 	opacity: 1;
 	visibility: visible;
@@ -611,7 +611,7 @@ button {
 	padding-bottom: 1rem;
 }
 
-.ac-check + li .n-title::after {
+.ac-check + .n-title::after {
 	content: "";
 	position: absolute;
 	right: 1.5rem;
@@ -624,12 +624,12 @@ button {
 	transition: all .3s ease;
 }
 
-.ac-check + li .n-title:hover::after{
+.ac-check + .n-title:hover::after{
 	border-top: solid 2px #ff2c60;
 	border-right: solid 2px #ff2c60;
 }
 
-.ac-check:checked + li .n-title::after {
+.ac-check:checked + .n-title::after {
 	transform: rotate(-45deg);
 	border-top: solid 2px #ff2c60;
 	border-right: solid 2px #ff2c60;
