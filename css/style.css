@@ -736,7 +736,7 @@ button {
 }
 
 .to-top-arrow::after{
-	top: 5px;
+	top: 9px;
 	left: 20px;
 	width: 12px;
 	height: 12px;
