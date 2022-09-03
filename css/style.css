@@ -934,6 +934,7 @@ button {
 		left: 5vw;
 		top: 0;
 		font-size: 3vw;
+		width: 1.2rem;
 	}
 
 	.scrollnav p {
