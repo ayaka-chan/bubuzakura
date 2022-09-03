@@ -827,6 +827,7 @@ button {
 @media (max-width: 767px) {
 	/* all */
 	#titlelogo {
+		margin: 300px auto;
 	}
 
 	#titlelogo img {
@@ -925,6 +926,16 @@ button {
 	
 	.menu-list a {
 		justify-content: center;
+	}
+
+	/* SCROLL DOWNアニメーション */
+	.scrollnav {
+		position: absolute;
+		top: 0;
+	}
+
+	.scrollnav p {
+		writing-mode: vertical-rl;
 	}
 }
 
