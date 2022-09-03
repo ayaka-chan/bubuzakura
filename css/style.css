@@ -941,7 +941,8 @@ button {
 	}
 
 	.scrollnav .scrollDown {
-		margin-left: 12px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
