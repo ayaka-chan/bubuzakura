@@ -931,8 +931,9 @@ button {
 	/* SCROLL DOWNアニメーション */
 	.scrollnav {
 		position: absolute;
+		left: 5vw;
 		top: 0;
-		width: auto;
+		font-size: 3vw;
 	}
 
 	.scrollnav p {
@@ -940,7 +941,7 @@ button {
 	}
 
 	.scrollnav .scrollDown {
-		margin-left: 12px;
+		/*margin-left: 12px;*/
 	}
 }
 
