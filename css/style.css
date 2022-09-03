@@ -938,6 +938,10 @@ button {
 	.scrollnav p {
 		writing-mode: vertical-rl;
 	}
+
+	.scrollnav .scrollDown {
+		margin-left: 12px;
+	}
 }
 
 
