@@ -607,7 +607,7 @@ button {
 	animation-delay: 0.7s;
 	animation-iteration-count: infinite;
 	animation-fill-mode: backwards;
-	margin: 10px auto 5rem;
+	margin: 10px 50% 5rem;
 }
 
 @keyframes scroll-down {
@@ -941,8 +941,10 @@ button {
 	}
 
 	.scrollnav .scrollDown {
+		margin-left; -width / 2px;
 	}
 }
+
 
 
 /*============================================
