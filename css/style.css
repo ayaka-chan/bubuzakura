@@ -100,7 +100,7 @@ a:hover {
 
 #titlelogo {
 	text-align: center;
-	margin: 270px auto;
+	margin: 200px auto;
 	max-width: 1000px;
 }
 
@@ -565,6 +565,7 @@ button {
 }
 
 
+
 /*============================================
 *
 * 桜を降らせる
@@ -583,6 +584,44 @@ button {
 	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
 	width:100%;
 	height: 100%;
+}
+
+
+
+/*============================================
+*
+* SCROLL DOWNアニメーション
+*
+*===========================================*/
+
+.scrollDown {
+	display: block;
+	width: 1px;
+	height: 50px;
+	background-image: linear-gradient(-180deg, transparent, #fff 50%, transparent 50%, transparent);
+	background-repeat: no-repeat;
+	background-size: 100% 200%;
+	animation-name: scroll-down;
+	animation-duration: 2s;
+	animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); /* easeOutQuintのイージング */
+	animation-delay: 0.7s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: backwards;
+	margin: 10px auto 5rem;
+}
+
+@keyframes scroll-down {
+	0% {
+		background-position: 0 100%;
+	}
+
+	50% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 -100%;
+	}
 }
 
 
@@ -790,6 +829,7 @@ button {
 	
 
 	#titlelogo {
+		margin: 250px auto;
 	}
 
 	#titlelogo img {
