@@ -826,10 +826,7 @@ button {
 
 @media (max-width: 767px) {
 	/* all */
-	
-
 	#titlelogo {
-		margin: 250px auto;
 	}
 
 	#titlelogo img {
