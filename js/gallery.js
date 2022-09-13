@@ -1,6 +1,8 @@
 //アルバムデータの作成（降順で追加）
 let album=[
 	//{src:'●画像のパス●', alt:'●写真説明●'},
+	{src:'img/2022/220910_2.jpg', alt:'2022年09月10日　ゆずれない願い収録（魚眼レンズ）'},
+	{src:'img/2022/220910_1.jpg', alt:'2022年09月10日　ゆずれない願い収録'},
 	{src:'img/2021/210412_1.jpg', alt:'2021年04月10日　カムパネルラ収録（魚眼レンズ）'},
 	{src:'img/2020/201226_1.jpg', alt:'2020年12月26日　クリスマス会（魚眼レンズ）'},
 	{src:'img/2020/200906_1.jpg', alt:'2020年09月05日　Pritender収録'},
@@ -50,4 +52,3 @@ for (let i=0; i<album.length; i++) {
 	thumbAlt.innerText=thumbImage.alt;
 	imgFlame.insertBefore(thumbAlt,null);
 }
-
