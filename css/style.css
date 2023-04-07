@@ -277,6 +277,7 @@ li {
 	height: 12px;
 	border-top: solid 2px #fff;
 	border-right: solid 2px #fff;
+	transition: all .3s ease;
 }
 
 .news .n-title:hover {
