@@ -784,6 +784,7 @@ button {
 	border-right: solid 1px #fff;
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
+	transition: all .3s ease;
 }
 
 .to-top-arrow:hover::after{
