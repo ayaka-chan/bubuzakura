@@ -559,10 +559,10 @@ button {
 }
 
 #cursor.hover::after {
-	content: "PUSH";
+	content: "CHECK";
 	position: absolute;
-	top: 35%;
-	left: 25%;
+	top: 31%;
+	left: 16%;
 }
 
 
