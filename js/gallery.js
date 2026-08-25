@@ -1,6 +1,7 @@
 //アルバムデータの作成（降順で追加）
 let album=[
 	//{src:'●画像のパス●', alt:'●写真説明●'},
+	{src:'img/2026/260822_1.jpg', alt:'2026年08月22日　あゝ無情収録'},
 	{src:'img/2026/260418_1.jpg', alt:'2026年04月18日　青春アミーゴ収録'},
 	{src:'img/2025/251220_1.jpg', alt:'2025年12月20日　クリスマス会「マジで世界変えちゃう5秒前」'},
 	{src:'img/2025/250426_1.jpg', alt:'2025年04月26日　さよーならまたいつか！収録'},
@@ -50,16 +51,14 @@ for (let i=0; i<album.length; i++) {
 	imgFlame.setAttribute('class', 'imgflame');
 	colFlame.insertBefore(imgFlame, null);
 
-	//<img src="img/2015/150405_2.jpg" alt="2015年4月5日　にんじゃりばんばん">
+	//<img src="●画像のパス●" alt="●写真説明●">
 	let thumbImage=document.createElement('img');
 	thumbImage.setAttribute('src', album[i].src);
 	thumbImage.setAttribute('alt', album[i].alt);
 	imgFlame.insertBefore(thumbImage, null);
 
-	//<p>キャプション</p>
+	//<p>●写真説明●</p>
 	let thumbAlt=document.createElement('p');
 	thumbAlt.innerText=thumbImage.alt;
 	imgFlame.insertBefore(thumbAlt,null);
 }
-
-
